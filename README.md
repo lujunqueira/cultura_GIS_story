@@ -22,3 +22,14 @@ Key characteristics:
 
 The survey includes up to 61 questions, including cultural activities and demographic characteristics.
 
+## 3. Construction of Cultural Participation Intensity Index
+Cultural participation intensity was operationalized as a composite index.
+From 14 selected cultural activity variables (P1 items), a count variable was constructed:
+•	Heavy users: 8–14 activities (last 12 months)
+•	Medium users: 4–7
+•	Low users: 1–3
+•	No users: 0
+
+This approach measures breadth of engagement rather than participation in a single activity.
+
+
