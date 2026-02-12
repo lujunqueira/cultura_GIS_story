@@ -1,0 +1,28 @@
+Region,State,City
+Norte,Acre,Rio Branco
+Norte,Amapá,Macapá
+Norte,Amazonas,Manaus
+Norte,Pará,Belém
+Norte,Rondônia,Porto Velho
+Norte,Roraima,Boa Vista
+Norte,Tocantins,Palmas
+Nordeste,Alagoas,Maceió
+Nordeste,Bahia,Salvador
+Nordeste,Ceará,Fortaleza
+Nordeste,Maranhão,São Luís
+Nordeste,Paraíba,João Pessoa
+Nordeste,Pernambuco,Recife
+Nordeste,Piauí,Teresina
+Nordeste,Rio Grande do Norte,Natal
+Nordeste,Sergipe,Aracaju
+Centro-Oeste,Distrito Federal,Brasília
+Centro-Oeste,Goiás,Goiânia
+Centro-Oeste,Mato Grosso,Cuiabá
+Centro-Oeste,Mato Grosso do Sul,Campo Grande
+Sudeste,Espírito Santo,Vitória
+Sudeste,Minas Gerais,Belo Horizonte
+Sudeste,Rio de Janeiro,Rio de Janeiro
+Sudeste,São Paulo,São Paulo
+Sul,Paraná,Curitiba
+Sul,Santa Catarina,Florianópolis
+Sul,Rio Grande do Sul,Porto Alegre

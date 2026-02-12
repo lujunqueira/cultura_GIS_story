@@ -1,0 +1,40 @@
+﻿Variable,Raw field,Type,Values / categories,Description / notes
+Nquest,Nquest,Integer,Unique ID,Respondent identifier from raw file. Primary key for joins across your derived tables.
+Peso,Weight,Numeric,Continuous weight,Survey weight; use for all weighted estimates and city-level aggregation.
+City,Capital,Categorical (string),"26 named capitals + Brasília: São Paulo, Rio de Janeiro, Belo Horizonte, Brasília, Salvador, Recife, Fortaleza, Curitiba, Porto Alegre, Belém, Manaus, etc.","Capital name derived by recoding numeric Capital codes to labels (e.g., 100 → São Paulo, 500 → Rio de Janeiro, 4300 → Aracaju, etc.). This will be your join key to the capitals geometry after you standardize names on the GIS side."
+Region,Regiao,Categorical (string),"Sudeste, Sul, Nordeste, Centro-Oeste, Norte",Macro-region classification recoded from numeric codes 1–5. Important for your regional comparison maps.
+Age Group,Idade,Categorical (ordered),"16 a 24, 25 a 34, 35 a 44, 45 a 59, 60 +",Age bands for population 16+. Use this whenever you stratify or report age results; also relevant if you ever normalize within age groups.
+Education Level,Escola1,Categorical (ordered),"Elementary, Secondary, Higher Education","Collapsed education variable: 1 = Elementary, 2 = Secondary, 3 = Higher Education. This is your main education indicator for maps and analysis."
+Socioeconomic Class,Rclasse2,Categorical (ordered),"A, B1, B2, C1, C2, D/E",AB class system; recoded from numeric codes 1–6. This is the cleanest social class variable; you’ll normalize these by population 16+ at city level.
+Income Group,Rendaf,Categorical (ordered),"- Up to R$ 1,412.00 - From R$ 1,413.00 to R$ 2,824.00 - From R$ 2,825.00 to R$ 4,236.00 - From R$ 4,237.00 to R$ 7,060.00 - From R$ 7,061.00 to R$ 14,120.00 - From R$ 14,121.00 to R$ 28,240.00 - From R$ 28,241.00 to R$ 70,060.00 - R$ 70,061.00 or more - Don’t know - Refused to answer","Income band derived from Rendaf codes 1–7, 9, 97, 99. Use for descriptive context and maybe cross-tabs, but for the main inequality maps, Socioeconomic_group is cleaner and less “don’t know/refused” noise."
+Ethnicity,Cor,Categorical,"White, Black, Mixed, Asian, Indigenous",Self-declared color/race. Recoded from numeric codes 1–5.
+Marital Status,Estcivil,Categorical,"Married, Single, Widowed, Separated","Standard marital status groups, recoded from codes 1–4. Mostly contextual."
+Gender,"P54A, P54B",Categorical,"Man, Woman, Other responses","Composite gender identity. Logic: P54A: 1=Male, 2=Female, 3/4 look at P54B; P54B: 1=Male, 3=Female, 2/4/5/96/99 grouped as “Other responses”. You collapsed multiple non-binary/other codes into a single “Other responses” category."
+Sexual Orientation,P55,Categorical,"LGBTQIAPN+, Heterosexual, Other","Recoding: several codes grouped to LGBTQIAPN+, 5 → Heterosexual, and specific residual codes mapped to Other. This is a simplified orientation axis, more for descriptive breakdowns than mapping."
+Religion,Religiao1,Categorical,"Catholic, Evangelical, Spiritist | Kardecist, Afro-Brazilian, Atheist / No religion, Undefined, Other, NA",Heavily collapsed from many numeric codes into a small set of labels. Evangelical includes multiple sub-denominations; several codes go to Other or Undefined; 98 becomes NA (blank). This is useful as a high-level cultural context variable.
+Children,Nfilhos,Categorical,"No children, Children",Derived indicator: if Nfilhos == 96 → No children; else Children
+Internet Access,P18,Categorical (ordered-ish),"Always connected, Almost always connected, Sometimes connected, Never connected","Recoding: 1=Always, 2=Almost always, 3–4 both → Sometimes connected, 96=Never connected. This is your structural access proxy when interpreting digital vs physical cultural participation."
+P1 Count,"P1A–P1S (excluding P1E, P1F, P1K, P1O, P1P)",Integer,0–14,"Count of cultural activities the respondent reports doing in the last 12 months across 14 selected P1 items. For each kept item, response==1 (“Last 12 months”) is counted; other values (2=“More than 1 year ago”, 3=“Never”) are not counted."
+P1 Count Lable,,Categorical (ordered),"Heavy user (14-8), Medium user (7-4), Low user (3-1), No user (0)",
+Libraries,P1A,Categorical (ordered),Did you go to libraries?,"1= Last 12 months, 2= More than 1 year ago, 3= Never"
+Cinema,P1B,Categorical (ordered),Did you go to the cinema?,"Last 12 months, More than 1 year ago, Never"
+Circus,P1C,Categorical (ordered),Did you go to the circus or attend circus performances?,"Last 12 months, More than 1 year ago, Never"
+Museums,P1D,Categorical (ordered),Did you go to museums or exhibitions of art or historical nature?,"Last 12 months, More than 1 year ago, Never"
+,P1E,,,dropped
+,P1F,,,dropped
+Theater,P1G,Categorical (ordered),"Did you go to theater performances (adult, children’s, stand-up, or musicals)?",
+Dance,P1H,Categorical (ordered),Did you go to dance shows or dance performances?,
+Book Fairs,P1I,Categorical (ordered),Did you go to book fairs or literary festivals?,
+Live Music Shows,P1J,Categorical (ordered),Did you go to music shows or musical performances?,
+,P1K,,,dropped
+Concerts,P1L,Categorical (ordered),"Did you go to classical or erudite music concerts, or opera?",
+Poetry slams,P1M,Categorical (ordered),"Did you go to poetry, literary or musical gatherings, or poetry slams/battles?",
+Traditional Festivals,P1N,Categorical (ordered),"Did you go to popular, traditional, or folk festivals?",
+,P1O,,,dropped
+,P1P,,,dropped
+Books,P1Q,Categorical (ordered),Did you read books?,
+Video Games,P1R,Categorical (ordered),"Did you play electronic games on video game consoles, computers, cell phones, or tablets?",
+Historical Sites,P1S,Categorical (ordered),Did you visit historical sites … (not for religious purposes)?,
+,,,,
+,,,,
+, ,,,
