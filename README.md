@@ -41,7 +41,7 @@ From 14 selected cultural activity variables (P1 items), a count variable was co
 * **Low users:** 1–3
 * **No users:** 0
 
-This approach measures breadth of engagement rather than participation in a single activity.
+This approach measures the degree of engagement (number of activities reported within the previous 12 months) rather than participation in a single activity.
 
 
 ## 4. Data Modeling and Aggregation
@@ -54,7 +54,7 @@ Three analytical tables were produced for Tableau and ArcGIS:
 * **Table B** records participation outcomes for each of the 14 activities at the respondent-by-activity level.
 * **Table C** aggregates weighted survey estimates to the capital-city level for GIS mapping.
 
-All city-level indicators were calculated using survey weights. Percentages were computed from weighted sums, ensuring that each capital’s results reflect the structure of its adult population rather than the raw interview counts. No additional population normalization was required beyond the survey weighting procedure.
+All city-level indicators were calculated using survey weights. All percentages were calculated using weighted denominators within each capital to preserve internal comparability across cities. No additional population normalization was required beyond the survey weighting procedure.
 
 
 ### Table A — Respondent-level (Wide)
@@ -113,7 +113,7 @@ It supports narrative/visualization but is not the GIS join table.
 
 **Core outputs (weighted estimates):**
 
-* `n_weighted` = sum of weights per city (scaled representation of the adult population structure; contextual only)
+* `n_weighted` = sum of survey weights per city (a weighted representation of each capital’s adult population used for percentage computation; reported for context, not as a population estimate)
 
 **Participation intensity distribution (percent):**
 
@@ -188,16 +188,8 @@ The analysis follows a structured, layered sequence:
 6. Map educational structure (regional and city-level)
 7. Compare education and participation patterns
 
-The study is designed as an exploratory spatial analysis. It identifies geographic patterns and structural alignments but does not test causal relationships.
+The study is designed as an exploratory spatial analysis. It identifies spatial distributions and structural alignment but does not perform multivariate modeling or causal estimation.
 
 
-
-## 7. Limitations
-
-This analysis applies only to residents of Brazil’s 27 capital cities and does not represent cultural participation in smaller cities or rural areas.
-
-The data are cross-sectional (2024) and do not capture changes over time.
-
-The survey measures participation only in the 14 selected activities and does not account for informal, emerging, or unlisted cultural practices.
 
 
